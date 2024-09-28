@@ -1,0 +1,520 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logout-button {
+    width: 150px;
+    padding: 10px 20px;
+    background-color: #343a40;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #8d8080;
+}
+
+/* Estilo da barra lateral */
+aside {
+    width: 230px;
+    background-color: #343a40;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding-top: 78px;
+}
+
+.ulMenu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.liTotal {
+    width: 150px;
+    display: flex;
+    margin-left: 26px;
+    cursor: pointer;
+}
+
+.liTotal a {
+    color: #524747;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.liTotal:hover {
+    background-color: #737980;
+}
+
+/* Estilo principal do conteúdo */
+main {
+    margin-left: 230px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px;
+    background: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button.close {
+    background: #ff4444;
+    color: #fff;
+    font-size: 14px;
+}
+
+button.close:hover {
+    background: #d32f2f;
+}
+
+/* Estilo dos formulários */
+#form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo das listas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li span {
+    flex: 1;
+}
+
+ul li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul li button.delete {
+    background: #ff4444;
+    color: #fff;
+}
+
+ul li button.edit {
+    background: #ffc107;
+    color: #fff;
+}
+
+ul li button.delete:hover {
+    background: #d32f2f;
+}
+
+ul li button.edit:hover {
+    background: #e0a800;
+}
+
+/* Estilo das seções de conteúdo */
+.tab-content {
+    display: none;
+    /* Oculta todas as seções por padrão */
+}
+
+#home-content {
+    display: block;
+    /* Mostra a seção de início por padrão */
+}
+
+.budget-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.budget-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.budget-item button {
+    margin-right: 10px;
+}
+
+/* Estilo do modal */
+/* Estilo do modal */
+.modal {
+    display: none;
+    /* Oculta o modal por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+/* Estilo do botão de fechar */
+.modal-content .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content .close:hover {
+    background: #ff0000;
+}
+
+/* Estilo do formulário */
+#budget-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Estilo dos campos do formulário */
+#budget-form input[type="text"],
+#budget-form input[type="date"],
+#budget-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#budget-form input[readonly] {
+    background: #f9f9f9;
+}
+
+/* Estilo do botão de envio */
+#budget-form button {
+    grid-column: span 3;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+#budget-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da mensagem de erro (se necessário) */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    grid-column: span 3;
+}
+
+
+
+/* estilizar ordens */
+
+.budget-item-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.budget-item-details {
+    flex-grow: 1;
+}
+
+.budget-item-field {
+    margin: 5px 0;
+}
+
+.budget-item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.budget-item-actions button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.budget-item-actions button.budget-item-delete {
+    background-color: #dc3545;
+}
+
+.budget-item-actions button:hover {
+    opacity: 0.8;
+}
+
+
+
+/* modal confirmdelete */
+
+.modalConfirmDelete {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contentDelet {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-contentDelet p {
+    margin-bottom: 20px;
+}
+
+.modal-contentDelet button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-contentDelet button#confirm-delete {
+    background-color: #dc3545;
+}
+
+.modal-contentDelet button:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Estilos para o modal de edição */
+.modal-edit {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo semitransparente */
+}
+
+.modal-content-edit {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    /* Largura máxima do modal */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas */
+    gap: 10px;
+    /* Espaçamento entre os campos */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-edit form {
+    display: grid;
+    width: 200%;
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas */
+    gap: 10px;
+}
+
+.modal-content-edit input,
+.modal-content-edit button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content-edit button {
+    grid-column: span 2;
+    /* Botão de salvar ocupa duas colunas */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.modal-content-edit button:hover {
+    background-color: #074f9c;
+}
+
+.close-btn {
+    grid-column: span 2;
+    /* Botão de fechar ocupa duas colunas */
+    justify-self: end;
+    /* Alinha à direita */
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilização do container do filtro de status */
+#status-filter {
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo para o rótulo do filtro */
+#status-filter label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilo para o select do filtro */
+#status-filter select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+}
+
+#status-filter select:focus {
+    border-color: #007bff;
+    outline: none;
+}
